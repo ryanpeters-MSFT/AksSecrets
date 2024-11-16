@@ -1,3 +1,7 @@
+# create the service account (used for workload identity)
+# NOTE: be sure to update the azure.workload.identity/client-id annotation
+kubectl apply -f .\serviceaccount.yaml
+
 # deploy the app and service
 kubectl apply -f .\deployment.yaml -f .\service.yaml
 
