@@ -6,8 +6,9 @@ This repository provides a demonstration of various ways to use Kubernetes secre
 
 Proceed to each section and complete the setup steps:
 
-- [0 - AKS](./0-AKS/)
-- [1 - App](./1-App/)
-- [2 - SecretsEnvVars](./2-SecretsEnvVars/)
-- [3 - SecretsVolume](./3-SecretsVolume/)
-- [4 - SecretsKeyVault](./4-SecretsKeyVault/)
+- [0 - AKS Deployment](./0-AKS/) - Configure our AKS cluster and necesary dependencies.
+- [1 - Application Deployment](./1-App/) - Deploy our test .NET Web API application.
+- [2 - Secrets (Environment Variables)](./2-SecretsEnvVars/) - Expose secrets via environment variables.
+- [3 - Secrets (Volume)](./3-SecretsVolume/) - Expose secrets via a volume mount.
+- [4 - Secrets (Azure Key Vault)](./4-SecretsKeyVault/) - Retrieve secrets from Azure Key Vault and expose via a volume mount.
+- [5 - Secrets (Azure Key Vault with SDK)](./5-SecretsSdk/) - Leverage the Key Vault SDK to retrieve secrets from within the applicaton.
