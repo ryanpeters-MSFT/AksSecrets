@@ -16,4 +16,4 @@ This step invokes several steps to create and configure the AKS cluster as well 
 
 This step creates an initial cluster with a basic deployment for our application, to be deployed in [the next step](../1-App/).
 
-**Note that the deployment will fail until the image is uploaded in the next step. This is because the ACR is created in this step, which is required for the next step.**
+**Note that the deployment will fail, with the error `ImagePullBackOff` until the image is uploaded in the next step. This is because the ACR is created in this step, which is required for the next step.**

@@ -7,14 +7,19 @@ var configuration = app.Services.GetRequiredService<IConfiguration>();
 app.MapGet("/", () =>
 {
     // OPTION 1: read from file in "secrets" folder
-    var fileApiKey = File.ReadAllText("secrets/apikey");
+    var file = "secrets/apikey";
 
-    if (!string.IsNullOrWhiteSpace(fileApiKey))
+    if (File.Exists(file))
     {
-        Console.WriteLine("Found API on file system...");
+        var fileApiKey = File.ReadAllText(file);
 
-        // yeah, don't ever do this...
-        return Results.Ok(fileApiKey);
+        if (!string.IsNullOrWhiteSpace(fileApiKey))
+        {
+            Console.WriteLine($"Found API key in file \"{file}\"...");
+
+            // yeah, don't ever do this...
+            return Results.Ok(fileApiKey);
+        }
     }
 
     // OPTION 2: read from the environment variable
@@ -22,7 +27,7 @@ app.MapGet("/", () =>
 
     if (!string.IsNullOrWhiteSpace(envApiKey))
     {
-        Console.WriteLine("Found API via environment variable...");
+        Console.WriteLine("Found API key via environment variable \"apikey\"...");
 
         // seriously, this is awful...
         return Results.Ok(envApiKey);
