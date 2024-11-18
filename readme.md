@@ -4,4 +4,10 @@ This repository provides a demonstration of various ways to use Kubernetes secre
 
 ## Running The Demos
 
-*TBD*
+Proceed to each section and complete the setup steps:
+
+- [0 - AKS](./0-AKS/)
+- [1 - App](./1-App/)
+- [2 - SecretsEnvVars](./2-SecretsEnvVars/)
+- [3 - SecretsVolume](./3-SecretsVolume/)
+- [4 - SecretsKeyVault](./4-SecretsKeyVault/)
