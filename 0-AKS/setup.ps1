@@ -30,7 +30,7 @@ az aks get-credentials -n $cluster -g $group --overwrite-existing
 # get OIDC issuer
 $oidcIssuer = az aks show -n $cluster -g $group --query oidcIssuerProfile.issuerUrl -o tsv
 
-# create the azure managed identity for the control plane
+# create the azure managed identity for workload identity
 $userAssignedClientId  = az identity create -n $azureManagedIdentity -g $group --query clientId -o tsv
 
 # create the federated identity
