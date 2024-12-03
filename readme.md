@@ -6,7 +6,7 @@ This repository provides a demonstration of various ways to use Kubernetes secre
 
 Proceed to each section and complete the setup steps:
 
-- [0 - AKS Deployment](./0-AKS/) - Configure our AKS cluster and necesary dependencies.
+- [0 - AKS Deployment](./0-AKS/) - Configure our AKS cluster and necessary dependencies.
 - [1 - Application Deployment](./1-App/) - Deploy our test .NET Web API application.
 - [2 - Secrets (Environment Variables)](./2-SecretsEnvVars/) - Expose secrets via environment variables.
 - [3 - Secrets (Volume)](./3-SecretsVolume/) - Expose secrets via a volume mount.
