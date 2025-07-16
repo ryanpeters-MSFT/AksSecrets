@@ -5,6 +5,8 @@ kubectl apply -f .\serviceaccount.yaml
 # deploy the app and service
 kubectl apply -f .\deployment.yaml -f .\service.yaml
 
+Start-Sleep -Seconds 20
+
 # get the IP of the service load balancer
 $ip = kubectl get svc secretapi --output jsonpath="{.status.loadBalancer.ingress[0].ip}"
 
